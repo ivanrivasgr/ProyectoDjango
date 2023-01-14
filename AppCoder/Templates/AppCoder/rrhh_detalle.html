@@ -1,0 +1,18 @@
+{% extends "Appcoder/padre.html" %}
+
+    {% load static %}
+
+{% block contenido %}
+
+<p>Nombre: <i> {{rrhh.nombre}} </i></p>
+<p>Cargo: <i> {{rrhh.cargo}} </i></p>
+<p>Fecha de nacimiento: <i> {{rrhh.fechadenac}} </i></p>
+<p>Supervisor Directo: <i> {{rrhh.supervisordirecto}} </i></p>
+<p>Año de Ingreso: <i> {{rrhh.anodeingreso}} </i></p>
+<p>Sueldo: <i> {{rrhh.sueldo}} </i></p> 
+<p>
+    
+    <a href="{% url 'ListEmpleado'%}"> <button type="button">Volver</button> </a>
+</p>
+
+{% endblock %}

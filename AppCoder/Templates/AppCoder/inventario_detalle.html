@@ -1,0 +1,23 @@
+{% extends "Appcoder/padre.html" %}
+
+    {% load static %}
+
+{% block contenido %}
+
+<p>Item: <i> {{inventario.item}} </i></p>
+<p>Tipo de Item: <i> {{inventario.tipodeitem}} </i></p>
+<p>Modelo de Item: <i> {{inventario.modelodeitem}} </i></p>
+<p>Año: <i> {{inventario.ano}} </i></p>
+<p>Tipo de Vehiculo: <i> {{inventario.tipodevehiculo}} </i></p>
+<p>Fecha de Compra: <i> {{inventario.fechadecompra}} </i></p>
+<p>Precio: <i> {{inventario.precio}} </i></p>
+<p>Cantidad: <i> {{inventario.cantidad}} </i></p>
+<p>Ultimo Proveedor: <i> {{inventario.proveedor}} </i></p>
+<p>Ultimo Comprador: <i> {{inventario.comprador}} </i></p>
+<p>
+    
+    <a href="{% url 'ListItem'%}"> <button type="button">Volver</button> </a>   
+</p>
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+
+{% extends "Appcoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+ {% if rrhh %}
+
+<center>
+    <ul>
+        {% for nombre in rrhh %}
+        
+        <p>Repuesto: {{rrhh.Repuesto}}</p>
+        <p>Tipo de Repuesto: {{rrhh.tipoderepuesto}}</p>
+        <p>Modelo de Repuesto: {{rrhh.modeloderepuesto}}</p>
+        <p>Tipo de Vehiculo: {{rrhh.tipodevehiculo}}</p>
+        <p>Año: {{rrhh.ano}}</p>
+        <p>Precio: {{rrhh.precio}}</p> 
+        <p>Comprador: {{rrhh.comprador}}</p> 
+        <p>Proveedor: {{rrhh.proveedor}}</p>
+        <br><br>
+
+            {% endfor %}
+     </ul>
+         
+    <a href="{% url 'BusquedaEmpleado' %}">
+    <button type="button">Volver a buscar</button>
+    </a>
+</center>
+
+
+ {% endif %}
+
+{% endblock %}

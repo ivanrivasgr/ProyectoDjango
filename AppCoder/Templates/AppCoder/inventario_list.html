@@ -1,0 +1,22 @@
+{% extends "Appcoder/padre.html" %}
+
+    {% load static %}
+
+{% block contenido %}
+
+<h1>Listado de items</h1>
+<ul>
+    {% for item in inventario_list %}
+
+
+        <p>Item: {{inventario.item}}</p>
+        <p>
+            <a href="{% url 'DetalleItem' item.id %}"> <button type="button">Ver</button> </a>
+            <a href="{% url 'UpdateItem' item.id %}"> <button type="button">Editar</button> </a>
+            <a href="{% url 'DeleteItem' item.id %}"> <button type="button">Borrar</button> </a>
+        </p>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

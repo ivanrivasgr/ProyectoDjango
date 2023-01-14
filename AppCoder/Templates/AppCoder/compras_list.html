@@ -1,0 +1,22 @@
+{% extends "Appcoder/padre.html" %}
+
+    {% load static %}
+
+{% block contenido %}
+
+<h1>Listado de compras</h1>
+<ul>
+    {% for compra in compras_list %}
+
+
+        <p>Nombre: {{compras.nombre}}</p>
+        <p>
+            <a href="{% url 'DetalleCompra' compra.id %}"> <button type="button">Ver</button> </a>
+            <a href="{% url 'UpdateCompra' compra.id %}"> <button type="button">Editar</button> </a>
+            <a href="{% url 'DeleteCompra' compra.id %}"> <button type="button">Borrar</button> </a>
+        </p>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

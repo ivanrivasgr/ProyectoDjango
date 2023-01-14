@@ -1,0 +1,37 @@
+
+{% extends "Appcoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+ {% if inventario %}
+
+<center>
+    <ul>
+        {% for item in inventario %}
+        
+        <p>Item: {{inventario.item}} </p>
+        <p>Tipo de Item: {{inventario.tipodeitem}} </p>
+        <p>Modelo de Item: {{inventario.modelodeitem}} </p>
+        <p>Año: {{inventario.ano}} </p>
+        <p>Tipo de Vehiculo: {{inventario.tipodevehiculo}} </p>
+        <p>Fecha de Compra: {{inventario.fechadecompra}} </p>
+        <p>Precio: {{inventario.precio}} </p>
+        <p>Cantidad: {{inventario.cantidad}} </p>
+        <p>Ultimo Proveedor: {{inventario.proveedor}} </p>
+        <p>Ultimo Comprador: {{inventario.comprador}} </p>
+        <br><br>
+
+            {% endfor %}
+     </ul>
+          
+    <a href="{% url 'BusquedaItem' %}">
+    <button type="button">Volver a buscar</button>
+    </a>
+</center>
+    
+    
+    {% endif %}
+    
+{% endblock %}

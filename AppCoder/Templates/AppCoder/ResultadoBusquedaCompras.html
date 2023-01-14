@@ -1,0 +1,35 @@
+
+{% extends "Appcoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+ {% if compras %}
+
+<center>
+    <ul>
+        {% for Repuesto in compras %}
+
+        <p>Repuesto: {{compras.Repuesto}}</p>
+        <p>Tipo de Repuesto: {{compras.tipoderepuesto}}</p>
+        <p>Modelo de Repuesto: {{compras.modeloderepuesto}}</p>
+        <p>Tipo de Vehiculo: {{compras.tipodevehiculo}}</p>
+        <p>Año: {{compras.ano}}</p>
+        <p>Precio: {{compras.precio}}</p> 
+        <p>Comprador: {{compras.comprador}}</p> 
+        <p>Proveedor: {{compras.proveedor}}</p>
+        <br><br>
+       
+            {% endfor %}
+     </ul>
+
+    <a href="{% url 'BusquedaCompra' %}">
+    <button type="button">Volver a buscar</button>
+    </a>
+</center>
+        
+        
+ {% endif %}
+        
+{% endblock %}

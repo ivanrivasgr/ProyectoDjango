@@ -1,0 +1,19 @@
+{% extends "Appcoder/padre.html" %}
+
+    {% load static %}
+
+{% block contenido %}
+
+<p>Vehiculo: <i> {{taller.vehiculo}} </i></p>
+<p>Modelo: <i> {{taller.modelo}} </i></p>
+<p>Status: <i> {{taller.status}} </i></p>
+<p>Trabajos Activos: <i> {{taller.trabajosactivos}} </i></p>
+<p>Año: <i> {{taller.ano}} </i></p>
+<p>Trabajos por Hacer: <i> {{taller.trabajosporhacer}} </i></p> 
+<p>
+
+    <a href="{% url 'ListVeh'%}"> <button type="button">Volver</button> </a>
+</p>
+
+{% endblock %}
+

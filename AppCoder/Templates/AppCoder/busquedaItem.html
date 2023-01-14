@@ -1,0 +1,14 @@
+
+{% extends "Appcoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+<form action="buscarItem/"    method="GET"> 
+<p>Buscar un item:</p>
+Item: <input type="string" name='item' id='item'>
+<br><br><input type="submit" value ="Buscar">
+</form>   
+
+{% endblock %}

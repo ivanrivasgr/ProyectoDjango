@@ -1,0 +1,32 @@
+
+{% extends "Appcoder/padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+ {% if taller %}
+
+<center>
+    <ul>
+        {% for vehiculo in taller %}
+        
+        <p>Vehiculo: {{taller.vehiculo}}</p>
+        <p>Año: {{taller.ano}}</p>
+        <p>Status: {{taller.status}}</p>
+        <p>Trabajos Activos: {{taller.trabajosactivos}}</p>
+        <p>Trabajos por hacer: {{taller.trabajosporhacer}}</p>
+        <br><br>
+
+            {% endfor %}
+     </ul>
+    
+    <a href="{% url 'BusquedaVehiculo' %}">
+    <button type="button">Volver a buscar</button>
+    </a>
+</center>
+
+
+ {% endif %}
+
+{% endblock %}

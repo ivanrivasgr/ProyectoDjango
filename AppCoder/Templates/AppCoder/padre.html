@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+    <head>
+
+
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Proyecto Final Coderhouse</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body> 
+
+    <style>
+    .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    </style>
+    
+       
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>  
+            <a class="navbar-brand" href="{% url 'ListVeh' %}">Taller</a>             
+            <a class="navbar-brand" href="{% url 'ListCompra' %}">Compras</a>
+            <a class="navbar-brand" href="{% url 'ListEmpleado' %}">RRHH</a>  
+            <a class="navbar-brand" href="{% url 'ListItem' %}">Inventario</a>      
+            <a class="navbar-brand" href="{% url 'CargaVehiculo' %}">Nuevo Vehiculo</a>    
+            <a class="navbar-brand" href="{% url 'CargaCompra' %}">Nueva Compra</a>
+            <a class="navbar-brand" href="{% url 'CargaEmpleado' %}">Nuevo Empleado</a> 
+            <a class="navbar-brand" href="{% url 'CargaItem' %}">Nuevo Items</a>     
+                   
+          
+            <!-- <li class="dropdown" list-style-none>
+                <a href="#" data-toggle="dropdown">Vehiculos</a>
+                <div class="dropdown-menu">
+                    <a class="navbar-brand" href="{% url 'BusquedaVehiculo' %}">Buscar Vehiculos</a>
+                    <a class="navbar-brand" href="{% url 'CargaVehiculo' %}">Cargar Vehiculo</a>
+                    <a class="navbar-brand" href="{% url 'CargaVehiculo' %}">Modificar Vehiculo</a>
+                    <a class="navbar-brand" href="{% url 'CargaVehiculo' %}">Eliminar Vehiculo</a>
+                </div>
+            </li>
+            <li class="dropdown" list-style-none>
+                <a href="#" data-toggle="dropdown">Compras</a>
+                <div class="dropdown-menu">
+                    <a class="navbar-brand" href="{% url 'CargaCompra' %}">Cargar Compra</a>
+                    <a class="navbar-brand" href="{% url 'BusquedaCompra' %}">Buscar Compras</a>
+                    <a class="navbar-brand" href="{% url 'CargaCompra' %}">Modificar Compra</a>
+                    <a class="navbar-brand" href="{% url 'CargaCompra' %}">Eliminar Compra</a>
+                </div>
+            </li>
+            <li class="dropdown" list-style-none>
+                <a href="#" data-toggle="dropdown">Empleados</a>
+                <div class="dropdown-menu">
+                    <a class="navbar-brand" href="{% url 'BusquedaEmpleado' %}">Buscar Empleados</a>
+                    <a class="navbar-brand" href="{% url 'CargaEmpleado' %}">Cargar Empleado</a>
+                    <a class="navbar-brand" href="{% url 'CargaEmpleado' %}">Modificar Empleado</a>
+                    <a class="navbar-brand" href="{% url 'CargaEmpleado' %}">Eliminar Empleado</a>
+                </div>
+            </li>
+            <li class="dropdown" list-style-none>
+                <a href="#" data-toggle="dropdown">Items</a>
+                <div class="dropdown-menu">
+                    <a class="navbar-brand" href="{% url 'BusquedaItem' %}">Buscar Items</a>
+                    <a class="navbar-brand" href="{% url 'CargaItem' %}">Cargar Item</a>
+                    <a class="navbar-brand" href="{% url 'CargaItem' %}">Modificar Item</a>
+                    <a class="navbar-brand" href="{% url 'CargaItem' %}">Eliminar Item</a>
+                </div>
+            </li>
+            </li> -->
+
+        </div>
+    </nav>
+
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-14">
+                        <div class="text-center text-white">
+                            
+                            {% block contenido %}
+
+                            {% endblock %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

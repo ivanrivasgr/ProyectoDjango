@@ -1,0 +1,20 @@
+{% extends "Appcoder/padre.html" %}
+
+    {% load static %}
+
+{% block contenido %}
+
+<p>Repuesto: <i> {{compras.Repuesto}} </i></p>
+<p>Tipo de Repuesto: <i> {{compras.tipoderepuesto}} </i></p>
+<p>Modelo de Repuesto: <i> {{compras.modeloderepuesto}} </i></p>
+<p>Tipo de Vehiculo: <i> {{compras.tipodevehiculo}} </i></p>
+<p>Año: <i> {{compras.ano}} </i></p>
+<p>Precio: <i> {{compras.precio}} </i></p> 
+<p>Comprador: <i> {{compras.comprador}} </i></p> 
+<p>Proveedor: <i> {{compras.proveedor}} </i></p>
+<p>
+    <a href="{% url 'ListCompra'%}"> <button type="button">Volver</button> </a>
+</p>
+
+{% endblock %}
+
